@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Python: module PONGstyle</title>
+</head><body>
+
+<table class="heading">
+<tr class="heading-text decor">
+<td class="title">&nbsp;<br><strong class="title">PONGstyle</strong></td>
+<td class="extra"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cadmin%5Cdesktop%5Cmycodes%5Cpython%5Cscripting_languages_codes%5C8.pong-style%5Cpongstyle.py">c:\users\admin\desktop\mycodes\python\scripting_languages_codes\8.pong-style\pongstyle.py</a></td></tr></table>
+    <p><span class="code">PONGstyle&nbsp;module:&nbsp;Contains&nbsp;functions&nbsp;for&nbsp;Pong&nbsp;game&nbsp;styling.</span></p>
+<p>
+<table class="section">
+<tr class="decor pkg-content-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Modules</strong></td></tr>
+    
+<tr><td class="decor pkg-content-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><table><tr><td class="multicolumn"><a href="pygame.html">pygame</a><br>
+</td><td class="multicolumn"><a href="random.html">random</a><br>
+</td><td class="multicolumn"><a href="sys.html">sys</a><br>
+</td><td class="multicolumn"></td></tr></table></td></tr></table><p>
+<table class="section">
+<tr class="decor functions-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Functions</strong></td></tr>
+    
+<tr><td class="decor functions-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><dl><dt><a name="-draw_background"><strong>draw_background</strong></a>(screen, screen_rectangle, msg, msg_box, SCRSIZE, player1_score, player2_score)</dt><dd><span class="code">Draw&nbsp;the&nbsp;game&nbsp;background,&nbsp;including&nbsp;dashed&nbsp;lines&nbsp;and&nbsp;player&nbsp;scores.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;screen:&nbsp;Pygame&nbsp;screen&nbsp;surface.<br>
+-&nbsp;screen_rectangle:&nbsp;Pygame&nbsp;Rect&nbsp;representing&nbsp;the&nbsp;screen&nbsp;dimensions.<br>
+-&nbsp;msg:&nbsp;Pygame&nbsp;surface&nbsp;containing&nbsp;the&nbsp;game&nbsp;message.<br>
+-&nbsp;msg_box:&nbsp;Pygame&nbsp;Rect&nbsp;representing&nbsp;the&nbsp;message&nbsp;box&nbsp;dimensions.<br>
+-&nbsp;SCRSIZE:&nbsp;Tuple&nbsp;representing&nbsp;the&nbsp;screen&nbsp;size.<br>
+-&nbsp;player1_score:&nbsp;Player&nbsp;1's&nbsp;score.<br>
+-&nbsp;player2_score:&nbsp;Player&nbsp;2's&nbsp;score.</span></dd></dl>
+ <dl><dt><a name="-draw_dashed_line"><strong>draw_dashed_line</strong></a>(screen, start, end, orientation, screen_rectangle)</dt><dd><span class="code">Draw&nbsp;a&nbsp;dashed&nbsp;line&nbsp;on&nbsp;the&nbsp;screen.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;screen:&nbsp;Pygame&nbsp;screen&nbsp;surface.<br>
+-&nbsp;start:&nbsp;Starting&nbsp;position&nbsp;of&nbsp;the&nbsp;line.<br>
+-&nbsp;end:&nbsp;Ending&nbsp;position&nbsp;of&nbsp;the&nbsp;line.<br>
+-&nbsp;orientation:&nbsp;String,&nbsp;either&nbsp;"horizontal"&nbsp;or&nbsp;"vertical".<br>
+-&nbsp;screen_rectangle:&nbsp;Pygame&nbsp;Rect&nbsp;representing&nbsp;the&nbsp;screen&nbsp;dimensions.</span></dd></dl>
+ <dl><dt><a name="-draw_objects"><strong>draw_objects</strong></a>(screen, player1, player2, ball)</dt><dd><span class="code">Draw&nbsp;player&nbsp;paddles&nbsp;and&nbsp;the&nbsp;ball&nbsp;on&nbsp;the&nbsp;screen.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;screen:&nbsp;Pygame&nbsp;screen&nbsp;surface.<br>
+-&nbsp;player1:&nbsp;Pygame&nbsp;Rect&nbsp;representing&nbsp;player&nbsp;1's&nbsp;paddle.<br>
+-&nbsp;player2:&nbsp;Pygame&nbsp;Rect&nbsp;representing&nbsp;player&nbsp;2's&nbsp;paddle.<br>
+-&nbsp;ball:&nbsp;Pygame&nbsp;Rect&nbsp;representing&nbsp;the&nbsp;ball.</span></dd></dl>
+ <dl><dt><a name="-goodbye_screen"><strong>goodbye_screen</strong></a>(screen, screen_rectangle)</dt><dd><span class="code">Display&nbsp;a&nbsp;goodbye&nbsp;message&nbsp;on&nbsp;the&nbsp;screen&nbsp;for&nbsp;2&nbsp;seconds.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;screen:&nbsp;Pygame&nbsp;screen&nbsp;surface.<br>
+-&nbsp;screen_rectangle:&nbsp;Pygame&nbsp;Rect&nbsp;representing&nbsp;the&nbsp;screen&nbsp;dimensions.</span></dd></dl>
+ <dl><dt><a name="-move_ball"><strong>move_ball</strong></a>(screen, ball, ballvec, player1, player1_score, player2, player2_score, screen_rectangle)</dt><dd><span class="code">Move&nbsp;the&nbsp;ball&nbsp;and&nbsp;handle&nbsp;collisions.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;screen:&nbsp;Pygame&nbsp;screen&nbsp;surface.<br>
+-&nbsp;ball:&nbsp;Pygame&nbsp;Rect&nbsp;representing&nbsp;the&nbsp;ball.<br>
+-&nbsp;ballvec:&nbsp;List&nbsp;containing&nbsp;the&nbsp;ball's&nbsp;velocity&nbsp;[x,&nbsp;y].<br>
+-&nbsp;player1:&nbsp;Pygame&nbsp;Rect&nbsp;representing&nbsp;player&nbsp;1's&nbsp;paddle.<br>
+-&nbsp;player1_score:&nbsp;Player&nbsp;1's&nbsp;score.<br>
+-&nbsp;player2:&nbsp;Pygame&nbsp;Rect&nbsp;representing&nbsp;player&nbsp;2's&nbsp;paddle.<br>
+-&nbsp;player2_score:&nbsp;Player&nbsp;2's&nbsp;score.<br>
+-&nbsp;screen_rectangle:&nbsp;Pygame&nbsp;Rect&nbsp;representing&nbsp;the&nbsp;screen&nbsp;dimensions.<br>
+&nbsp;<br>
+Returns:<br>
+-&nbsp;Updated&nbsp;ball,&nbsp;player1_score,&nbsp;and&nbsp;player2_score.</span></dd></dl>
+ <dl><dt><a name="-move_player1"><strong>move_player1</strong></a>(direction, player1, PLAYER_STEP, screen_rectangle)</dt><dd><span class="code">Move&nbsp;player&nbsp;1's&nbsp;paddle&nbsp;up&nbsp;or&nbsp;down&nbsp;based&nbsp;on&nbsp;the&nbsp;input&nbsp;direction.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;direction:&nbsp;String,&nbsp;either&nbsp;"up"&nbsp;or&nbsp;"down".<br>
+-&nbsp;player1:&nbsp;Pygame&nbsp;Rect&nbsp;representing&nbsp;player&nbsp;1's&nbsp;paddle.<br>
+-&nbsp;PLAYER_STEP:&nbsp;Step&nbsp;size&nbsp;for&nbsp;player&nbsp;movement.<br>
+-&nbsp;screen_rectangle:&nbsp;Pygame&nbsp;Rect&nbsp;representing&nbsp;the&nbsp;screen&nbsp;dimensions.<br>
+&nbsp;<br>
+Returns:<br>
+-&nbsp;Updated&nbsp;player1.</span></dd></dl>
+ <dl><dt><a name="-move_player2"><strong>move_player2</strong></a>(direction, player2, PLAYER_STEP, screen_rectangle)</dt><dd><span class="code">Move&nbsp;player&nbsp;2's&nbsp;paddle&nbsp;up&nbsp;or&nbsp;down&nbsp;based&nbsp;on&nbsp;the&nbsp;input&nbsp;direction.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;direction:&nbsp;String,&nbsp;either&nbsp;"up"&nbsp;or&nbsp;"down".<br>
+-&nbsp;player2:&nbsp;Pygame&nbsp;Rect&nbsp;representing&nbsp;player&nbsp;2's&nbsp;paddle.<br>
+-&nbsp;PLAYER_STEP:&nbsp;Step&nbsp;size&nbsp;for&nbsp;player&nbsp;movement.<br>
+-&nbsp;screen_rectangle:&nbsp;Pygame&nbsp;Rect&nbsp;representing&nbsp;the&nbsp;screen&nbsp;dimensions.<br>
+&nbsp;<br>
+Returns:<br>
+-&nbsp;Updated&nbsp;player2.</span></dd></dl>
+ <dl><dt><a name="-reset_ball"><strong>reset_ball</strong></a>(ball, screen_rectangle)</dt><dd><span class="code">Reset&nbsp;the&nbsp;ball's&nbsp;position&nbsp;to&nbsp;the&nbsp;center&nbsp;after&nbsp;a&nbsp;score.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;ball:&nbsp;Pygame&nbsp;Rect&nbsp;representing&nbsp;the&nbsp;ball.<br>
+-&nbsp;screen_rectangle:&nbsp;Pygame&nbsp;Rect&nbsp;representing&nbsp;the&nbsp;screen&nbsp;dimensions.</span></dd></dl>
+ <dl><dt><a name="-welcome_screen"><strong>welcome_screen</strong></a>(screen, screen_rectangle)</dt><dd><span class="code">Display&nbsp;a&nbsp;welcome&nbsp;message&nbsp;on&nbsp;the&nbsp;screen&nbsp;for&nbsp;2&nbsp;seconds.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;screen:&nbsp;Pygame&nbsp;screen&nbsp;surface.<br>
+-&nbsp;screen_rectangle:&nbsp;Pygame&nbsp;Rect&nbsp;representing&nbsp;the&nbsp;screen&nbsp;dimensions.</span></dd></dl>
+ <dl><dt><a name="-winner_screen"><strong>winner_screen</strong></a>(screen, winner, screen_rectangle, player1_score, player2_score)</dt><dd><span class="code">Display&nbsp;a&nbsp;winner&nbsp;message&nbsp;on&nbsp;the&nbsp;screen&nbsp;for&nbsp;2&nbsp;seconds.<br>
+Reset&nbsp;player&nbsp;scores.<br>
+&nbsp;<br>
+Parameters:<br>
+-&nbsp;screen:&nbsp;Pygame&nbsp;screen&nbsp;surface.<br>
+-&nbsp;winner:&nbsp;String&nbsp;representing&nbsp;the&nbsp;winner&nbsp;("player&nbsp;1"&nbsp;or&nbsp;"player&nbsp;2").<br>
+-&nbsp;screen_rectangle:&nbsp;Pygame&nbsp;Rect&nbsp;representing&nbsp;the&nbsp;screen&nbsp;dimensions.<br>
+-&nbsp;player1_score:&nbsp;Player&nbsp;1's&nbsp;score.<br>
+-&nbsp;player2_score:&nbsp;Player&nbsp;2's&nbsp;score.<br>
+&nbsp;<br>
+Returns:<br>
+-&nbsp;Updated&nbsp;player1_score&nbsp;and&nbsp;player2_score.</span></dd></dl>
+</td></tr></table><p>
+<table class="section">
+<tr class="decor data-decor heading-text">
+<td class="section-title" colspan=3>&nbsp;<br><strong class="bigsection">Data</strong></td></tr>
+    
+<tr><td class="decor data-decor"><span class="code">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td><td>&nbsp;</td>
+<td class="singlecolumn"><strong>BLACK</strong> = (0, 0, 0)<br>
+<strong>BLUE</strong> = (0, 0, 255)<br>
+<strong>GREEN</strong> = (0, 128, 0)<br>
+<strong>MAGENTA</strong> = (255, 0, 255)<br>
+<strong>RED</strong> = (255, 0, 0)<br>
+<strong>WHITE</strong> = (255, 255, 255)</td></tr></table>
+</body></html>
